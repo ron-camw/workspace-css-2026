@@ -1,0 +1,90 @@
+/* 1 Global Variables
+    2 Layout
+*/
+
+/* ---- 1 Global Variables (CSS variables start with "--") ----*/
+:root {
+    --color-bg-body: #FFFF00;
+    --color-bg-section: hsl(115, 50%, 75%);
+    --color-font-body: black;
+    --img-board: url('../img/water.webp');
+    /*
+    --img-cardback: url('../img.water.webp');
+    --img-cardfront: url('../img/BACK.png');
+    --img-cardfront2: url('../img/BACK.png');
+    */
+}
+
+#zen-explanation{--pos-top: 170px; --pos-left: 350px; --front-img: url(..img/newspaper2.jpg);}
+#zen-participation{--pos-top: 170px ; --pos-left: 350px ; --front-img: url(..img/newspaper2.jpg);}
+
+/*  Practice */
+
+body {
+    background-color: var(--color-bg-body);
+    color: var(--color-bg-section);
+}
+
+/* . represents a class; page wrapper is a class */
+.page-wrapper {
+    /* Use global variable to set image as background */
+    background-image: var(--img-board);
+    position: fixed;
+    /* Adjust left, top, width, height, ensure board is in middle */
+    left: 30%;
+    width: 80%;
+    height: 100vh;
+}
+
+/* ---- 2 Layout ---- */
+
+/* Relative Postion */
+
+abbr {
+    position: relative;
+    top: -10px;
+    font-size: 2em;
+}
+
+article{
+    position: absolute;
+    top: var(--pos-top);
+    left: var(--pos-left);
+    width: 300px ;
+    height: 40vh;
+    overflow: hidden;
+}
+
+/* Hide the elements */
+footer, aside {
+    display: none;
+}
+
+/* Required: Web Font and Local Font */
+header h1 {
+    font-family: "Playwrite BE WAL Guides", cursive ;
+    font-size: 2em ;
+
+}
+ @font-face {
+    font-family: 'myFont';
+    src: url('../fonts/chunkfive.woff') format('woff'), url(../fonts/chunkfive.svg) format('svg');
+    font-weight: normal;
+    font-style: italic;
+ }
+
+ header h2 {
+    font-family: 'myFont', Arial, Helvetica, sans-serif;
+    font-size: 1.5 em ;
+ }
+
+ a {
+    text-transform: uppercase;
+ }
+
+ /* Display and Visibility */
+ #zen-partcipation h3 {
+    display: none;
+    /* visibiity: hidden; */
+    /* opacity: 1; */
+ }
